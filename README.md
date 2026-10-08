@@ -4,6 +4,8 @@ An open-source agent workspace in development for local and cloud developer work
 
 **Status:** project foundation. This repository contains the website, product specification, and contributor documentation. It does not yet contain a coding-agent runtime. Cloud execution is a later milestone.
 
+**Project timeline:** The project began in November 2025. The website and public repository launched in October 2026.
+
 ## What we're building
 
 Connect a local Git repository, describe a task, follow an agent's activity, and review its proposed changes. Begin with one agent integration and one reliable local workflow before adding cloud execution.

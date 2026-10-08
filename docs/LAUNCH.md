@@ -2,6 +2,8 @@
 
 The website is a buildless static site in `dist/`, hosted on Vercel and maintained in the public GitHub repository.
 
+The project began in November 2025. The website and public repository launched in October 2026.
+
 - Production website: https://rez1.dev/
 - Vercel address: https://rez1-workspace.vercel.app/
 - Source: https://github.com/IslamRezwan/rez1-workspace

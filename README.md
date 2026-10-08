@@ -37,7 +37,7 @@ LICENSE               MIT license for this foundation
 
 ## Development priorities
 
-1. Publish this foundation to a public repository and replace the website's contribution contact with the real repository link when available.
+1. Track the implementation in https://github.com/IslamRezwan/rez1-workspace/issues.
 2. Implement local repository selection and isolated task worktrees.
 3. Integrate one agent with visible tool activity and approval gates.
 4. Add diff review, test results, and cancellation.
@@ -46,7 +46,7 @@ See [the MVP](docs/MVP.md), [architecture](docs/ARCHITECTURE.md), and [launch gu
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Until a public repository is available, contact contact@rez1.dev to discuss a contribution.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Open an issue in the public repository or contact contact@rez1.dev to discuss a contribution.
 
 ## License
 

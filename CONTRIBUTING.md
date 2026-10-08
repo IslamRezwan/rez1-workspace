@@ -2,7 +2,7 @@
 
 The project is at the foundation stage. Read docs/MVP.md before proposing implementation work.
 
-Until the public issue tracker is available, send proposals to contact@rez1.dev. Keep contributions focused on one concrete improvement. Do not introduce cloud execution before the local task-to-review workflow is validated.
+Open a proposal at https://github.com/IslamRezwan/rez1-workspace/issues or email contact@rez1.dev. Keep contributions focused on one concrete improvement. Do not introduce cloud execution before the local task-to-review workflow is validated.
 
 For website changes:
 

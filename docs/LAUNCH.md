@@ -1,39 +1,30 @@
-# Launch checklist
+# Hosting and domain setup
 
-## Project identity
+The website is a buildless static site in `dist/`, hosted on Vercel and maintained in the public GitHub repository.
 
-- Working name: rez1 workspace
-- Intended domain: rez1.dev
+- Production website: https://rez1.dev/
+- Vercel address: https://rez1-workspace.vercel.app/
+- Source: https://github.com/IslamRezwan/rez1-workspace
 - Contact: contact@rez1.dev
-- Current status: foundation; no working coding-agent runtime yet
-- License: MIT for this foundation
 
-## Public repository
+## Deployments
 
-The public repository is https://github.com/IslamRezwan/rez1-workspace.
+The Vercel GitHub app is restricted to `IslamRezwan/rez1-workspace`. Changes to `main` trigger production deployments; branches can produce previews. `vercel.json` sets the output directory to `dist` with no build step. No model keys or runtime environment variables are required for this marketing site.
 
-Publish this project's source and docs. Keep the `dist` directory: it is authored source for this buildless site. Exclude credentials and generated archives. Add the real repository link to the homepage once the repository exists.
+## DNS
 
-## Website hosting
+Cloudflare manages DNS. Follow the current targets displayed in Vercel's project domain settings rather than hardcoding legacy IP addresses. At migration, apex and www use DNS-only CNAME records to the project-specific Vercel target. Cloudflare flattens the apex CNAME.
 
-The website consists only of `dist/index.html`, `dist/styles.css`, and `dist/app.js`. There is no build command, backend, or database. It can be deployed as static files; the Sites manifest is in `.openai/hosting.json`.
+Keep the Cloudflare email-routing MX, SPF, and DKIM records. Changing website DNS must not remove email records. The previous Sites-hosted URL remains available separately, but production domain DNS is moved to Vercel.
 
-The Sites deployment is public at https://rez1-workspace.fuzzymochi4.chatgpt.site. Domain verification for rez1.dev is pending.
+## Contact form behavior
 
-## Domain connection
+The website opens a Gmail, Outlook, or mailto draft for the visitor to review and send. It does not store messages or claim a message has been delivered. Email forwarding handles inbound contact mail; sending replies requires an outgoing mail service configured by the maintainer.
 
-Use only the exact DNS targets returned by the hosting provider for this deployment. Do not guess an IP or CNAME from the preview URL. Connect the apex `rez1.dev` using the provider's apex instructions, and add verification records as requested.
+## Plan restrictions
 
-Preserve Cloudflare Email Routing's MX records and email-related TXT records so contact@rez1.dev continues receiving mail. Review any existing root A, AAAA, or CNAME records before replacing website routing.
+Vercel Hobby is for personal, non-commercial use. Review https://vercel.com/docs/plans/hobby and https://vercel.com/docs/limits/fair-use-guidelines before turning this personal open-source foundation into a commercial startup site. No paid upgrade is required by the static source itself; hosting eligibility depends on its use.
 
-## Before a startup application
+## Local preview
 
-- Verify the public site loads without an owner login.
-- Verify contact@rez1.dev receives mail.
-- Publish the real repository and accurately describe its current stage.
-- Describe Claude integration as planned until it exists.
-- Review the program's current eligibility and application requirements.
-
-Suggested factual description:
-
-> We are developing an open-source agent workspace for local and cloud developer workflows. Our initial milestone is a local repository-to-diff workflow, with a planned Claude integration for coding tasks and human review before changes are accepted.
+Run `python -m http.server 4173 --directory dist` from the repository root and open http://localhost:4173. JavaScript and CSS work without a package installation. Google Fonts has a system fallback.

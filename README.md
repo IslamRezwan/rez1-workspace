@@ -23,8 +23,8 @@ Open http://localhost:4173. Alternatively open `dist/index.html` directly. The o
 ```text
 dist/                 Deployable static website
   index.html          Homepage
-  styles.css          Responsive theme
-  app.js              Accessible workflow tabs
+  styles.css          Responsive light and dark themes
+  app.js              Theme, interactive concept, contact drafts
 docs/
   MVP.md              Scope and acceptance criteria
   ARCHITECTURE.md     Proposed local execution design
@@ -42,6 +42,8 @@ LICENSE               MIT license for this foundation
 3. Integrate one agent with visible tool activity and approval gates.
 4. Add diff review, test results, and cancellation.
 
+The first planned integration is Claude through the first-party API. The website uses sample data and makes no model calls. Production website: https://rez1.dev/ · Vercel: https://rez1-workspace.vercel.app/. `vercel.json` deploys `dist` without a build step. See the launch guide for Hobby plan restrictions.
+
 See [the MVP](docs/MVP.md), [architecture](docs/ARCHITECTURE.md), and [launch guide](docs/LAUNCH.md).
 
 ## Contributing
@@ -51,3 +53,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). Open an issue in the public repository o
 ## License
 
 MIT. The license covers this repository's original source and documentation. Model providers and third-party dependencies retain their own terms. Google Fonts are loaded remotely and are not bundled here.
+
